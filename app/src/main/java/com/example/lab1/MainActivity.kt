@@ -17,6 +17,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         /*println("Hello World")
 
         val s : String = "Hello World"
@@ -27,21 +28,49 @@ class MainActivity : ComponentActivity() {
         for(i in 1..5) {
             sum += i
         }
-        println(sum)*/
+        println(sum)
 
         calcSum()
     }
 
-    fun calcSum() : Unit {
+    fun calcSum(start:Int, end:Int) : Int {
         var sum: Int = 0
-        for (i in 1..5) {
+        for (i in start..end) {
             sum += i
         }
-        println(sum)
-    }
+        return sum;
+        }
 
-    fun createSum(start:Int, end:Int) : Int {
-        var sum = 0;
+        println(calcSum(0, 5))
 
+        val e: Employee = Employee()
+        e.id = 1234
+        e.name = "John Smith"
+        println("ID: " + e.id)
+        println("Name: " + e.name)
+
+
+        var e1:Employee = Employee()
+        var e2:Employee = Employee()
+        var e3:Employee = Employee()
+
+        for(i in listOf<Employee>(e1,e2)) {
+            println(i)
+        }
+
+        for(i in listOf<Employee>(e3)) {
+            println(i)
+        }*/
+
+
+      listOf<Employee>()
+
+        var e1:Employee = Employee()
+        var e2:Employee = Employee()
+        var e3:Employee = Employee()
+
+       for (i in listOf<Employee>(e1,e2,e3)){
+           println(i)
+       }
     }
 }
